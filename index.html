@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bogdan (Bo) Plieshka, Principal Frontend Engineer</title>
+<meta name="description" content="CV of Bogdan (Bo) Plieshka, Principal Frontend Engineer in Berlin. Frontend platforms, CI/CD, test automation and React Native for TV.">
+<meta property="og:title" content="Bogdan (Bo) Plieshka, Principal Frontend Engineer">
+<meta property="og:description" content="Frontend platforms, CI/CD, test automation and React Native for TV. Berlin.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #16202a;
+    --muted: #5b6875;
+    --line: #e3e8ee;
+    --accent: #1f6f9f;
+    --chip: #eef5fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f161d;
+      --fg: #e6edf3;
+      --muted: #9aa8b5;
+      --line: #24313d;
+      --accent: #6cb6e4;
+      --chip: #17232e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 15px/1.55 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 820px; margin: 0 auto; padding: 48px 24px 64px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  h1 { font-size: 30px; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+  .role { font-size: 17px; font-weight: 500; color: var(--accent); margin: 6px 0 10px; }
+  .contact { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--muted); font-size: 14px; }
+  .download {
+    display: inline-block; padding: 9px 16px; border-radius: 8px;
+    background: var(--accent); color: var(--bg); font-weight: 600; font-size: 14px; white-space: nowrap;
+  }
+  .download:hover { text-decoration: none; opacity: .9; }
+
+  h2 {
+    font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); margin: 36px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line);
+  }
+  p { margin: 0 0 10px; }
+  .company { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+  .company h3 { font-size: 17px; margin: 0; }
+  .company .where { color: var(--muted); font-size: 14px; }
+  .position { margin-top: 16px; break-inside: avoid; }
+  .position h4 { font-size: 15px; font-weight: 600; margin: 0; }
+  .position .when { color: var(--muted); font-size: 13px; font-weight: 400; }
+  ul.points { margin: 6px 0 0; padding-left: 18px; }
+  ul.points li { margin: 3px 0; }
+  .earlier { list-style: none; padding: 0; margin: 0; }
+  .earlier li { margin: 7px 0; }
+  .earlier b { font-weight: 600; }
+  .earlier .when { color: var(--muted); font-size: 13px; }
+  .talks { list-style: none; padding: 0; margin: 0; }
+  .talks li { margin: 7px 0; }
+  .talks i { font-style: normal; font-weight: 500; }
+  .talks .where { color: var(--muted); }
+  .skills { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .skills li { background: var(--chip); border-radius: 6px; padding: 3px 9px; font-size: 13.5px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  @media (max-width: 640px) {
+    main { padding: 32px 16px 48px; }
+    h1 { font-size: 26px; }
+    .two { grid-template-columns: 1fr; }
+  }
+
+  @page { size: A4; margin: 13mm 14mm; }
+  @media print {
+    :root { --bg: #fff; --fg: #16202a; --muted: #55626f; --line: #dde3e9; --accent: #1f6f9f; --chip: #eef3f7; }
+    body { font-size: 10pt; line-height: 1.42; }
+    main { max-width: none; padding: 0; }
+    .download { display: none; }
+    h1 { font-size: 21pt; }
+    .role { font-size: 12pt; margin: 3px 0 6px; }
+    .contact { font-size: 9pt; }
+    h2 { margin: 16px 0 7px; font-size: 8pt; }
+    .company h3 { font-size: 11.5pt; }
+    .position { margin-top: 9px; }
+    .position h4 { font-size: 10pt; }
+    ul.points li { margin: 1.5px 0; }
+    .skills li { font-size: 8.5pt; padding: 1px 6px; }
+    a { color: var(--fg); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Bogdan (Bo) Plieshka</h1>
+      <p class="role">Principal Frontend Engineer</p>
+      <ul class="contact">
+        <li>Berlin, Germany</li>
+        <li><a href="mailto:b.pleshka@gmail.com">b.pleshka@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/gotbahn">linkedin.com/in/gotbahn</a></li>
+        <li><a href="https://github.com/gotbahn">github.com/gotbahn</a></li>
+        <li><a href="https://www.youtube.com/@gotbahn">youtube.com/@gotbahn</a></li>
+      </ul>
+    </div>
+    <a class="download" href="cv.pdf" download="bogdan-plieshka-cv.pdf">Download PDF</a>
+  </header>
+
+  <h2>Summary</h2>
+  <p>
+    Principal Frontend Engineer with fifteen years in frontend, the last nine at Zattoo,
+    where I build the platform other engineers ship on: the monorepo, CI/CD, release process
+    and test layers behind 60+ React and React Native apps for web and every major TV platform.
+    I have been a senior engineer, tech lead and engineering manager of up to 12 people, so I
+    lead through architecture, standards and people at once, and stay hands-on where it matters.
+    I speak about this work at React conferences and have co-organised React Berlin since 2018.
+  </p>
+
+  <h2>Experience</h2>
+
+  <div class="company">
+    <h3>Zattoo</h3>
+    <span class="where">Berlin · TV streaming for web, mobile and TV · 2017 to now</span>
+  </div>
+
+  <div class="position">
+    <h4>Principal Frontend Engineer <span class="when">· Apr 2024 to now</span></h4>
+    <h4>Frontend Technology Lead <span class="when">· Feb 2026 to now, alongside</span></h4>
+    <ul class="points">
+      <li>Own the platform, CI/CD, release and quality layer for 60+ React and React Native app variations across 26 tenants and 7 clients (2026), on a release train every two weeks</li>
+      <li>Built quality into delivery: universal system tests on Web, Android TV, tvOS and real Fire TV devices; reset coverage to an honest 13% and raised it to over 80%; layered CI gates per change</li>
+      <li>Restructured the monorepo by domain and ownership: one shared configuration space for 16 projects, code ownership generated from feature specs, RFCs and ADRs for every cross-team change</li>
+      <li>Introduced agentic code review on every pull request and made the codebase AI-ready with skills, specs and generated ownership. About half of merged changes are now written with an agent</li>
+      <li>Technical lead of the migration to a new media backend platform: drove the backend adapter design with fellow principal engineers, lead the working group and an external team of three</li>
+      <li>Lead the frontend chapter: roles, ownership model, roadmap and budget. Mentor engineers and run the principal engineers' round</li>
+    </ul>
+  </div>
+
+  <div class="position">
+    <h4>Engineering Manager <span class="when">· Feb 2022 to Mar 2024</span></h4>
+    <ul class="points">
+      <li>Managed a team of up to 12 frontend engineers, test engineers and working students. Hired and onboarded, and grew a working student into the team lead of the Web App</li>
+      <li>Moved Web TV from monthly to per-sprint releases by defining release and quality ownership and shifting QA from manual testing to automation</li>
+      <li>Wrote the engineering role framework used across product development: Release Owner, Quality Owner, Team Lead, Engineering Manager, Software Engineer in Test, Mentor, Onboarding Buddy</li>
+      <li>Started the Universal TV team, the base of Zattoo's React Native TV platform, as Amazon's first point of contact on its new TV OS, Vega</li>
+      <li>Authored the micro-frontend approach for the web apps: independent apps on shared code and one common infrastructure, in one monorepo</li>
+    </ul>
+  </div>
+
+  <div class="position">
+    <h4>Frontend Tech Lead <span class="when">· Jan 2020 to Feb 2022</span></h4>
+    <ul class="points">
+      <li>Merged Web TV, Web App and Chromecast into one monorepo and one delivery pipeline, for tech parity and lower infrastructure cost</li>
+      <li>Moved all web CI to GitHub Actions and built the organisation's shared actions: publishing, changelog checks, Jira linking, labelling, affected-area detection</li>
+      <li>Designed the release-candidate model and the release tooling the web apps shipped on</li>
+      <li>Set the engineering standards: pull request process, specifications, feature flags, system test principles. Reviewed about 1,000 pull requests a year</li>
+    </ul>
+  </div>
+
+  <div class="position">
+    <h4>Senior Frontend Engineer <span class="when">· Jun 2017 to Dec 2019</span></h4>
+    <ul class="points">
+      <li>Founding engineer of the web monorepo: modernised the stack and built the shared lint, icon, theming and configuration packages every web app uses</li>
+      <li>Built the Chromecast receiver app from scratch to Google Cast certification</li>
+      <li>Core engineer of the Zattoo Progressive Web App (2019), which replaced the web player. Interviewed by Heise about it, and worked with Google on PWA distribution</li>
+      <li>Introduced end-to-end testing, error tracking and the release cycle specification</li>
+    </ul>
+  </div>
+
+  <h2>Earlier</h2>
+  <ul class="earlier">
+    <li><b>KAYAK</b>, Berlin · Software Engineer <span class="when">· 2017</span><br>Car rentals redesign on the car and performance squads</li>
+    <li><b>Pepper.com</b>, Berlin · Frontend Developer <span class="when">· 2015 to 2017</span><br>Responsive components and frontend infrastructure for a deal community of 20M+ users</li>
+    <li><b>Magento, an eBay company</b>, Kyiv · Lead UI Engineer <span class="when">· 2014 to 2015</span><br>Core team of the open-source Magento 2 platform: frontend architecture, theming, performance, accessibility</li>
+    <li><b>Svitla Systems</b> for Inflection (US), Kyiv and San Francisco · Senior Frontend Developer <span class="when">· 2013 to 2014</span><br>Led the frontend architecture for peoplesmart.com, 40M+ visitors a month</li>
+    <li><b>Ciklum, Govitall, freelance</b>, Kyiv · Frontend Developer <span class="when">· 2011 to 2013</span></li>
+  </ul>
+
+  <h2>Talks</h2>
+  <ul class="talks">
+    <li><i>The Fourth Platform: How Vega Got Us Surprisingly Close to "Write Once, Run Everywhere"</i> <span class="where">· React Summit, next.app devCon, reactjsday, React Day Berlin, 2026 · <a href="https://zattoo.github.io/fourth-platform">slides</a></span></li>
+    <li><i>How Zattoo Unified Its TV Apps with React Native and Vega OS</i> <span class="where">· <a href="https://www.youtube.com/watch?v=6ye7atlWhD4">Amazon Dev Chats</a>, 2026</span></li>
+    <li><i>From Native to React Native for TV: The Zattoo Case</i> <span class="where">· <a href="https://www.youtube.com/watch?v=VbPAFebIUQo">Callstack webinar</a>, 2026</span></li>
+    <li><i>Fast-Tracking Quality for Hundreds of React Applications With Automated Testing Layers</i> <span class="where">· <a href="https://gitnation.com/contents/fast-tracking-quality-for-hundreds-of-react-applications-with-automated-testing-layers">React Advanced London</a>, 2025</span></li>
+    <li><i>Outperforming native apps with a progressive web app</i> <span class="where">· <a href="https://www.youtube.com/watch?v=vUDWlFG11Sg">TX Group conference</a>, Zurich, 2019</span></li>
+  </ul>
+
+  <div class="two">
+    <div>
+      <h2>Community</h2>
+      <ul class="earlier">
+        <li><b>React Berlin Meetup</b> · co-organiser and host since 2018</li>
+        <li><b>React Day Berlin</b> · programme committee since 2022</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Languages</h2>
+      <ul class="earlier">
+        <li>English · full professional</li>
+        <li>Ukrainian, Russian · native</li>
+        <li>German · elementary</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>TypeScript</li><li>JavaScript</li><li>React</li><li>React Native for TV</li><li>Node.js</li>
+    <li>Monorepo architecture</li><li>Micro frontends</li><li>GitHub Actions</li><li>CI/CD</li>
+    <li>Release engineering</li><li>Playwright</li><li>Cypress</li><li>Jest</li><li>System and device testing</li>
+    <li>Storybook</li><li>AI-assisted development</li><li>Claude Code</li><li>RFCs and ADRs</li><li>Engineering leadership</li>
+  </ul>
+
+  <h2>Education</h2>
+  <p>National Technical University of Ukraine "Kyiv Polytechnic Institute" · Specialist in Engineering · 2009</p>
+</main>
+</body>
+</html>
