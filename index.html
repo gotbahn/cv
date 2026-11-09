@@ -20,6 +20,7 @@
     --fg: #000000;
     --muted: #555555;
     --line: #000000;
+    --rule: #c4c4c4;
     --link: #0000ee;
     --visited: #551a8b;
     color-scheme: light;
@@ -29,6 +30,7 @@
     --fg: #ffffff;
     --muted: #a6a6a6;
     --line: #ffffff;
+    --rule: #4a4a4a;
     --link: #8ab4ff;
     --visited: #c58af9;
     color-scheme: dark;
@@ -39,6 +41,7 @@
       --fg: #ffffff;
       --muted: #a6a6a6;
       --line: #ffffff;
+    --rule: #4a4a4a;
       --link: #8ab4ff;
       --visited: #c58af9;
       color-scheme: dark;
@@ -67,9 +70,13 @@
   }
 
   h2 {
-    font-size: 15px; font-weight: 700; margin: 36px 0 12px; padding-bottom: 4px;
-    border-bottom: 1px solid var(--line);
+    font-size: 15px; font-weight: 700; margin: 40px 0 12px; padding-bottom: 5px;
+    border-bottom: 1px solid var(--rule);
   }
+  strong { font-weight: 600; }
+  .glance { margin: 0 0 12px; font-size: 14px; color: var(--muted); }
+  .glance strong { color: var(--fg); }
+  .subrole { color: var(--muted); margin: 2px 0 0; font-size: 14px; }
   p { margin: 0 0 10px; }
   .when { color: var(--muted); font-weight: 400; white-space: nowrap; font-variant-numeric: tabular-nums; }
   .line .when { margin-left: auto; }
@@ -102,6 +109,9 @@
     .two { grid-template-columns: 1fr; }
     .skills { grid-template-columns: 1fr; gap: 0; }
     .skills dd { margin-bottom: 8px; }
+    .line { display: block; }
+    .line .when { display: block; margin: 1px 0 0; }
+    .company .where { display: block; margin-top: 2px; }
   }
 
   @page { size: A4; margin: 13mm 14mm 16mm; }
@@ -113,7 +123,9 @@
     h1 { font-size: 20pt; }
     .role { font-size: 11.5pt; margin: 2px 0 6px; }
     .contact { font-size: 9pt; }
-    h2 { margin: 13px 0 7px; font-size: 10.5pt; }
+    h2 { margin: 13px 0 7px; font-size: 10.5pt; border-bottom-color: #bbb; }
+    .glance { font-size: 9pt; margin-bottom: 6px; }
+    .subrole { font-size: 9.5pt; }
     .company h3 { font-size: 13pt; }
     .company .where { font-size: 9.5pt; }
     .position { margin-top: 9px; break-inside: auto; }
@@ -133,6 +145,7 @@
     <div>
       <h1>Bogdan (Bo) Plieshka</h1>
       <p class="role">Principal Frontend Engineer</p>
+      <p class="glance"><strong>15 years</strong> in frontend · <strong>hundreds</strong> of apps · <strong>half</strong> of merges agent-written · React Berlin organiser since <strong>2018</strong></p>
       <ul class="contact">
         <li>Berlin, Germany</li>
         <li><a href="mailto:bogdanplieshka@gmail.com">bogdanplieshka@gmail.com</a></li>
@@ -151,13 +164,9 @@
   <h2>Summary</h2>
   <p>
     Principal Frontend Engineer with a decade and a half in frontend, almost ten of those years at Zattoo,
-    where I build the platform other engineers ship on: the monorepo, CI/CD, release process
-    and test layers behind hundreds of React and React Native apps for web, native and every other major TV platform.
-    Lately I bring AI into how we deliver: an agent-ready codebase, spec-driven development and agentic review,
-    with significant gains in speed and quality.
-    I have been a tech lead and an engineering manager, so I
-    lead through architecture, standards and people at once, and stay hands-on where it matters.
-    I speak about this work at React conferences and have co-organised React Berlin since 2018.
+    where I build the platform other engineers ship on, for web, native and every other major TV platform.
+    Lately I bring AI into how we deliver, with significant gains in speed and quality.
+    Tech lead and engineering manager before, I lead through architecture, standards and people, and stay hands-on where it matters.
   </p>
 
   <h2>Experience</h2>
@@ -169,46 +178,45 @@
 
   <div class="position">
     <div class="line"><h4>Principal Frontend Engineer</h4><span class="when">Apr 2024 to now</span></div>
-    <div class="line"><h4 class="also">and Frontend Technology Lead</h4><span class="when">Feb 2026 to now</span></div>
+    <p class="subrole">Also Frontend Technology Lead since Feb 2026</p>
     <ul class="points">
-      <li>Brought AI into the whole delivery lifecycle: about half of merged changes are now written with an agent, and engineers from outside frontend ship through the same harness</li>
-      <li>Made the codebase agent-ready: context agents can navigate through docs as code, skills and rules; spec-driven development from feature spec to merged change; agent-ready tickets; an agentic review gate on every pull request</li>
-      <li>Own the platform, CI/CD, release and quality layer for hundreds of React and React Native app variations, on a release train every sprint</li>
-      <li>Built quality into delivery: universal end-to-end tests on Web &amp; Native, in emulators and on real devices; reset test coverage to an honest baseline and raised it to cover most of the codebase; layered CI gates per change</li>
-      <li>Restructured the monorepo by domain and ownership, with one shared configuration space for multiple projects</li>
-      <li>Introduced RFCs and ADRs for technology shifts and horizontal changes</li>
-      <li>Lead the frontend chapter: roles, ownership model, roadmap and budget. Mentor engineers and run the principal engineers' round</li>
+      <li>Brought AI into the whole delivery lifecycle: <strong>about half of merged changes</strong> are now written with an agent, and engineers from outside frontend ship through the same harness</li>
+      <li>Made the codebase <strong>agent-ready</strong>: docs as code, skills and rules agents can navigate; spec-driven development; agent-ready tickets; an agentic review gate on every pull request</li>
+      <li>Own the platform, CI/CD, release and quality layer for <strong>hundreds of React and React Native app variations</strong>, on a release train every sprint</li>
+      <li>Built quality into delivery: <strong>universal end-to-end tests</strong> on Web &amp; Native, in emulators and on real devices; honest test coverage raised to most of the codebase; layered CI gates</li>
+      <li><strong>Restructured the monorepo</strong> by domain and ownership with one shared configuration space, and introduced RFCs and ADRs for technology shifts and horizontal changes</li>
+      <li><strong>Lead the frontend chapter</strong>: roles, ownership model, roadmap and budget. Mentor engineers and run the principal engineers' round</li>
     </ul>
   </div>
 
   <div class="position">
     <div class="line"><h4>Engineering Manager</h4><span class="when">Feb 2022 to Mar 2024</span></div>
     <ul class="points">
-      <li>Managed a team of up to 12 frontend engineers. Hired and onboarded, and grew a working student into the team lead</li>
-      <li>Moved the project from monthly to per-sprint releases by defining release and quality ownership and shifting QA from manual testing to automation</li>
-      <li>Wrote the engineering role framework used across product development: Release Owner, Quality Owner, Team Lead, Engineering Manager, Software Engineer in Test, Mentor, Onboarding Buddy</li>
-      <li>Started the Universal TV team, the base of Zattoo's React Native TV platform, as Amazon's first point of contact on its new TV OS, Vega</li>
-      <li>Authored the micro-frontend approach for the web apps: independent apps on shared code and one common infrastructure, in one monorepo</li>
+      <li>Managed a team of <strong>up to 12 frontend engineers</strong>. Hired and onboarded, and grew a working student into the team lead</li>
+      <li>Moved the project from <strong>monthly to per-sprint releases</strong> by defining release and quality ownership and shifting QA from manual testing to automation</li>
+      <li>Wrote the <strong>engineering role framework</strong> used across product development: Release Owner, Quality Owner, Team Lead, Engineering Manager, Software Engineer in Test, Mentor, Onboarding Buddy</li>
+      <li>Started the <strong>Universal TV team</strong>, the base of Zattoo's React Native TV platform, as Amazon's first point of contact on its new TV OS, Vega</li>
+      <li>Authored the <strong>micro-frontend approach</strong> for the web apps: independent apps on shared code and one common infrastructure, in one monorepo</li>
     </ul>
   </div>
 
   <div class="position">
     <div class="line"><h4>Frontend Tech Lead</h4><span class="when">Jan 2020 to Feb 2022</span></div>
     <ul class="points">
-      <li>Merged Web TV, Web App and Chromecast into one monorepo and one delivery pipeline, for tech parity and lower infrastructure cost</li>
-      <li>Moved all web CI to GitHub Actions and built the organisation's shared actions: publishing, changelog checks, Jira linking, labelling, affected-area detection</li>
-      <li>Designed the release-candidate model and the release tooling the web apps shipped on</li>
-      <li>Set the engineering standards: pull request process, specifications, feature flags, system test principles. Reviewed about 1,000 pull requests a year</li>
+      <li>Merged Web TV, Web App and Chromecast into <strong>one monorepo and one delivery pipeline</strong>, for tech parity and lower infrastructure cost</li>
+      <li>Moved all web CI to <strong>GitHub Actions</strong> and built the organisation's shared actions: publishing, changelog checks, Jira linking, labelling, affected-area detection</li>
+      <li>Designed the <strong>release-candidate model</strong> and the release tooling the web apps shipped on</li>
+      <li>Set the engineering standards: pull request process, specifications, feature flags, system test principles. Reviewed <strong>about 1,000 pull requests a year</strong></li>
     </ul>
   </div>
 
   <div class="position">
     <div class="line"><h4>Senior Frontend Engineer</h4><span class="when">Jun 2017 to Dec 2019</span></div>
     <ul class="points">
-      <li>Founding engineer of the web monorepo: modernised the stack and built the shared lint, icon, theming and configuration packages every web app uses</li>
-      <li>Built the Chromecast receiver app from scratch to Google Cast certification</li>
-      <li>Core engineer of the Zattoo Progressive Web App (2019), which replaced the web player. Interviewed by Heise about it, and worked with Google on PWA distribution</li>
-      <li>Introduced end-to-end testing, error tracking and the release cycle specification</li>
+      <li><strong>Founding engineer</strong> of the web monorepo: modernised the stack and built the shared lint, icon, theming and configuration packages every web app uses</li>
+      <li>Built the <strong>Chromecast receiver app</strong> from scratch to Google Cast certification</li>
+      <li>Core engineer of the Zattoo <strong>Progressive Web App</strong> (2019), which replaced the web player. Interviewed by Heise about it, and worked with Google on PWA distribution</li>
+      <li>Introduced <strong>end-to-end testing</strong>, error tracking and the release cycle specification</li>
     </ul>
   </div>
 
@@ -217,7 +225,7 @@
     <li><div class="line"><span><b>KAYAK</b>, Berlin · Software Engineer</span><span class="when">2017</span></div>Car rentals redesign on the car and performance squads</li>
     <li><div class="line"><span><b>Pepper.com</b>, Berlin · Frontend Developer</span><span class="when">2015 to 2017</span></div>Responsive components and frontend infrastructure for a deal community of 20M+ users</li>
     <li><div class="line"><span><b>Magento, an eBay company</b>, Kyiv · Lead UI Engineer</span><span class="when">2014 to 2015</span></div>Core team of the open-source Magento 2 platform: frontend architecture, theming, performance, accessibility</li>
-    <li><div class="line"><span><b>Svitla Systems</b> for Inflection (US), Kyiv and San Francisco · Senior Frontend Developer</span><span class="when">2013 to 2014</span></div>Led the frontend architecture for peoplesmart.com, 40M+ visitors a month</li>
+    <li><div class="line"><span><b>Svitla Systems</b>, Kyiv and San Francisco · Senior Frontend Developer</span><span class="when">2013 to 2014</span></div>Led the frontend architecture of peoplesmart.com for Inflection (US), 40M+ visitors a month</li>
     <li><div class="line"><span><b>Ciklum, Govitall, freelance</b>, Kyiv · Frontend Developer</span><span class="when">2011 to 2013</span></div></li>
   </ul>
 
@@ -236,6 +244,7 @@
     <dt>Platform</dt><dd>Monorepo and micro-frontend architecture, GitHub Actions, CI/CD, release engineering</dd>
     <dt>Testing</dt><dd>Playwright, Cypress, Jest, system and device testing, Storybook</dd>
     <dt>Practice</dt><dd>AI-assisted development with Claude Code, RFCs and ADRs, engineering leadership</dd>
+    <dt>Languages</dt><dd>English (full professional), Ukrainian and Russian (native), German (elementary)</dd>
   </dl>
 
   <div class="two">
@@ -245,20 +254,12 @@
         <li><b>React Berlin Meetup</b> · co-organiser and host since 2018</li>
         <li><b>React Day Berlin</b> · programme committee since 2022</li>
       </ul>
+    </div>
+    <div>
       <h2>Education</h2>
       <p>National Technical University of Ukraine "Kyiv Polytechnic Institute" · Specialist in Engineering · 2009</p>
     </div>
-    <div>
-      <h2>Languages</h2>
-      <ul class="earlier">
-        <li>English · full professional</li>
-        <li>Ukrainian, Russian · native</li>
-        <li>German · elementary</li>
-      </ul>
-    </div>
   </div>
-
-
 </main>
 <script>
   const root = document.documentElement;
