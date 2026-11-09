@@ -29,6 +29,8 @@ await page.pdf({
 await browser.close();
 
 if (outDir !== resolve('.')) {
-    copyFileSync('index.html', join(outDir, 'index.html'));
+    for (const file of ['index.html', 'favicon.svg', 'apple-touch-icon.png', 'icon-512.png']) {
+        copyFileSync(file, join(outDir, file));
+    }
 }
 console.log(`cv.pdf written to ${outDir}`);
