@@ -52,63 +52,78 @@
     color: var(--fg);
     font: 15px/1.55 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
-  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
+  main { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px; }
   a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
   a:visited { color: var(--visited); }
 
   header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
-  h1 { font-size: 28px; line-height: 1.2; margin: 0; font-weight: 700; }
-  .role { font-size: 16px; margin: 4px 0 10px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0; font-weight: 700; }
+  .role { font-size: 17px; margin: 4px 0 10px; }
   .contact { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 14px; }
-  .tools { display: flex; gap: 14px; align-items: baseline; font-size: 14px; white-space: nowrap; }
+  .tools { display: flex; gap: 14px; align-items: baseline; font-size: 13px; white-space: nowrap; }
   .theme {
     font: inherit; color: var(--link); background: none; border: 0; padding: 0;
     text-decoration: underline; text-underline-offset: 2px; cursor: pointer;
   }
 
   h2 {
-    font-size: 15px; font-weight: 700; margin: 32px 0 10px; padding-bottom: 4px;
+    font-size: 15px; font-weight: 700; margin: 36px 0 12px; padding-bottom: 4px;
     border-bottom: 1px solid var(--line);
   }
   p { margin: 0 0 10px; }
-  .company { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
-  .company h3 { font-size: 16px; margin: 0; }
+  .when { color: var(--muted); font-weight: 400; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .line .when { margin-left: auto; }
+  .line { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 16px; flex-wrap: wrap; }
+  .company { margin-top: 4px; }
+  .company h3 { font-size: 20px; font-weight: 600; margin: 0; }
   .company .where { color: var(--muted); font-size: 14px; }
-  .position { margin-top: 16px; break-inside: avoid; }
-  .position h4 { font-size: 15px; font-weight: 600; margin: 0; }
-  .position .when { color: var(--muted); font-weight: 400; }
+  .position { margin-top: 18px; break-inside: avoid; }
+  .position h4 { font-size: 16px; font-weight: 600; margin: 0; }
+  .position .line + .line { margin-top: 2px; }
+  .position .also { font-weight: 400; }
   ul.points { margin: 6px 0 0; padding-left: 18px; }
   ul.points li { margin: 3px 0; }
   .earlier { list-style: none; padding: 0; margin: 0; }
-  .earlier li { margin: 7px 0; }
+  .earlier li { margin: 9px 0; }
   .earlier b { font-weight: 600; }
-  .earlier .when { color: var(--muted); }
   .talks { list-style: none; padding: 0; margin: 0; }
-  .talks li { margin: 7px 0; }
-  .talks i { font-style: normal; font-weight: 600; }
+  .talks li { margin: 8px 0; }
+  .talks i { font-style: normal; font-weight: 500; }
   .talks .where { color: var(--muted); }
-  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .skills { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; }
+  .two { display: grid; grid-template-columns: 3fr 2fr; gap: 0 32px; }
+  .footer { display: none; }
   @media (max-width: 640px) {
     main { padding: 32px 16px 48px; }
-    header { flex-direction: column-reverse; }
-    h1 { font-size: 24px; }
+    header { flex-direction: column; }
+    h1 { font-size: 26px; }
     .two { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; gap: 0; }
+    .skills dd { margin-bottom: 8px; }
   }
 
-  @page { size: A4; margin: 13mm 14mm; }
+  @page { size: A4; margin: 13mm 14mm 16mm; }
   @media print {
     :root, :root[data-theme="dark"] { --bg: #fff; --fg: #000; --muted: #555; --line: #000; --link: #0000ee; --visited: #0000ee; }
-    body { font-size: 10pt; line-height: 1.38; }
+    body { font-size: 10pt; line-height: 1.36; }
     main { max-width: none; padding: 0; }
     .tools { display: none; }
     h1 { font-size: 20pt; }
     .role { font-size: 11.5pt; margin: 2px 0 6px; }
     .contact { font-size: 9pt; }
-    h2 { margin: 14px 0 7px; font-size: 10.5pt; }
-    .company h3 { font-size: 11pt; }
-    .position { margin-top: 9px; }
-    .position h4 { font-size: 10pt; }
+    h2 { margin: 13px 0 7px; font-size: 10.5pt; }
+    .company h3 { font-size: 13pt; }
+    .company .where { font-size: 9.5pt; }
+    .position { margin-top: 9px; break-inside: auto; }
+    .position .line { break-after: avoid; }
+    ul.points li { break-inside: avoid; }
+    .position h4 { font-size: 10.5pt; }
     ul.points li { margin: 1px 0; }
+    .earlier li { margin: 5px 0; }
+    .talks li { margin: 5px 0; }
+    .skills { gap: 2px 12px; }
   }
 </style>
 </head>
@@ -138,6 +153,8 @@
     Principal Frontend Engineer with a decade and a half in frontend, almost ten of those years at Zattoo,
     where I build the platform other engineers ship on: the monorepo, CI/CD, release process
     and test layers behind hundreds of React and React Native apps for web, native and every other major TV platform.
+    Lately I bring AI into how we deliver: an agent-ready codebase, spec-driven development and agentic review,
+    with about half of merged changes now written with an agent.
     I have been a senior engineer, tech lead and engineering manager, so I
     lead through architecture, standards and people at once, and stay hands-on where it matters.
     I speak about this work at React conferences and have co-organised React Berlin since 2018.
@@ -145,16 +162,17 @@
 
   <h2>Experience</h2>
 
-  <div class="company">
+  <div class="company line">
     <h3>Zattoo</h3>
-    <span class="where">Berlin · Streaming Service · 2017 to now</span>
+    <span class="where">Berlin · Streaming Service · <span class="when">2017 to now</span></span>
   </div>
 
   <div class="position">
-    <h4>Principal Frontend Engineer <span class="when">· Apr 2024 to now</span></h4>
-    <h4>Frontend Technology Lead <span class="when">· Feb 2026 to now, alongside</span></h4>
+    <div class="line"><h4>Principal Frontend Engineer</h4><span class="when">Apr 2024 to now</span></div>
+    <div class="line"><h4 class="also">and Frontend Technology Lead</h4><span class="when">Feb 2026 to now</span></div>
     <ul class="points">
-      <li>Brought AI into the whole delivery lifecycle: a context-rich codebase that agents can navigate through docs as code, skills and rules; spec-driven development from feature spec to merged change; agent-ready tickets; and an agentic review gate on every pull request. About half of merged changes are now written with an agent, and engineers from outside frontend ship through the same harness</li>
+      <li>Brought AI into the whole delivery lifecycle: about half of merged changes are now written with an agent, and engineers from outside frontend ship through the same harness</li>
+      <li>Made the codebase agent-ready: context agents can navigate through docs as code, skills and rules; spec-driven development from feature spec to merged change; agent-ready tickets; an agentic review gate on every pull request</li>
       <li>Own the platform, CI/CD, release and quality layer for hundreds of React and React Native app variations, on a release train every sprint</li>
       <li>Built quality into delivery: universal end-to-end tests on Web &amp; Native, in emulators and on real devices; reset test coverage to an honest baseline and raised it to cover most of the codebase; layered CI gates per change</li>
       <li>Restructured the monorepo by domain and ownership, with one shared configuration space for multiple projects</li>
@@ -164,7 +182,7 @@
   </div>
 
   <div class="position">
-    <h4>Engineering Manager <span class="when">· Feb 2022 to Mar 2024</span></h4>
+    <div class="line"><h4>Engineering Manager</h4><span class="when">Feb 2022 to Mar 2024</span></div>
     <ul class="points">
       <li>Managed a team of up to 12 frontend engineers. Hired and onboarded, and grew a working student into the team lead</li>
       <li>Moved the project from monthly to per-sprint releases by defining release and quality ownership and shifting QA from manual testing to automation</li>
@@ -175,7 +193,7 @@
   </div>
 
   <div class="position">
-    <h4>Frontend Tech Lead <span class="when">· Jan 2020 to Feb 2022</span></h4>
+    <div class="line"><h4>Frontend Tech Lead</h4><span class="when">Jan 2020 to Feb 2022</span></div>
     <ul class="points">
       <li>Merged Web TV, Web App and Chromecast into one monorepo and one delivery pipeline, for tech parity and lower infrastructure cost</li>
       <li>Moved all web CI to GitHub Actions and built the organisation's shared actions: publishing, changelog checks, Jira linking, labelling, affected-area detection</li>
@@ -185,7 +203,7 @@
   </div>
 
   <div class="position">
-    <h4>Senior Frontend Engineer <span class="when">· Jun 2017 to Dec 2019</span></h4>
+    <div class="line"><h4>Senior Frontend Engineer</h4><span class="when">Jun 2017 to Dec 2019</span></div>
     <ul class="points">
       <li>Founding engineer of the web monorepo: modernised the stack and built the shared lint, icon, theming and configuration packages every web app uses</li>
       <li>Built the Chromecast receiver app from scratch to Google Cast certification</li>
@@ -196,11 +214,11 @@
 
   <h2>Earlier</h2>
   <ul class="earlier">
-    <li><b>KAYAK</b>, Berlin · Software Engineer <span class="when">· 2017</span><br>Car rentals redesign on the car and performance squads</li>
-    <li><b>Pepper.com</b>, Berlin · Frontend Developer <span class="when">· 2015 to 2017</span><br>Responsive components and frontend infrastructure for a deal community of 20M+ users</li>
-    <li><b>Magento, an eBay company</b>, Kyiv · Lead UI Engineer <span class="when">· 2014 to 2015</span><br>Core team of the open-source Magento 2 platform: frontend architecture, theming, performance, accessibility</li>
-    <li><b>Svitla Systems</b> for Inflection (US), Kyiv and San Francisco · Senior Frontend Developer <span class="when">· 2013 to 2014</span><br>Led the frontend architecture for peoplesmart.com, 40M+ visitors a month</li>
-    <li><b>Ciklum, Govitall, freelance</b>, Kyiv · Frontend Developer <span class="when">· 2011 to 2013</span></li>
+    <li><div class="line"><span><b>KAYAK</b>, Berlin · Software Engineer</span><span class="when">2017</span></div>Car rentals redesign on the car and performance squads</li>
+    <li><div class="line"><span><b>Pepper.com</b>, Berlin · Frontend Developer</span><span class="when">2015 to 2017</span></div>Responsive components and frontend infrastructure for a deal community of 20M+ users</li>
+    <li><div class="line"><span><b>Magento, an eBay company</b>, Kyiv · Lead UI Engineer</span><span class="when">2014 to 2015</span></div>Core team of the open-source Magento 2 platform: frontend architecture, theming, performance, accessibility</li>
+    <li><div class="line"><span><b>Svitla Systems</b> for Inflection (US), Kyiv and San Francisco · Senior Frontend Developer</span><span class="when">2013 to 2014</span></div>Led the frontend architecture for peoplesmart.com, 40M+ visitors a month</li>
+    <li><div class="line"><span><b>Ciklum, Govitall, freelance</b>, Kyiv · Frontend Developer</span><span class="when">2011 to 2013</span></div></li>
   </ul>
 
   <h2>Talks</h2>
@@ -212,6 +230,14 @@
     <li><i>Outperforming native apps with a progressive web app</i> <span class="where">· <a href="https://www.youtube.com/watch?v=vUDWlFG11Sg">TX Group conference</a>, Zurich, 2019</span></li>
   </ul>
 
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Stack</dt><dd>TypeScript, JavaScript, React, React Native for TV, Node.js</dd>
+    <dt>Platform</dt><dd>Monorepo and micro-frontend architecture, GitHub Actions, CI/CD, release engineering</dd>
+    <dt>Testing</dt><dd>Playwright, Cypress, Jest, system and device testing, Storybook</dd>
+    <dt>Practice</dt><dd>AI-assisted development with Claude Code, RFCs and ADRs, engineering leadership</dd>
+  </dl>
+
   <div class="two">
     <div>
       <h2>Community</h2>
@@ -219,6 +245,8 @@
         <li><b>React Berlin Meetup</b> · co-organiser and host since 2018</li>
         <li><b>React Day Berlin</b> · programme committee since 2022</li>
       </ul>
+      <h2>Education</h2>
+      <p>National Technical University of Ukraine "Kyiv Polytechnic Institute" · Specialist in Engineering · 2009</p>
     </div>
     <div>
       <h2>Languages</h2>
@@ -230,11 +258,7 @@
     </div>
   </div>
 
-  <h2>Skills</h2>
-  <p>TypeScript, JavaScript, React, React Native for TV, Node.js · monorepo architecture, micro frontends · GitHub Actions, CI/CD, release engineering · Playwright, Cypress, Jest, system and device testing · Storybook · AI-assisted development, Claude Code · RFCs and ADRs, engineering leadership</p>
 
-  <h2>Education</h2>
-  <p>National Technical University of Ukraine "Kyiv Polytechnic Institute" · Specialist in Engineering · 2009</p>
 </main>
 <script>
   const root = document.documentElement;
